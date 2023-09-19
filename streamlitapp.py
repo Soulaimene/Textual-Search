@@ -5,13 +5,11 @@ import time
 import os
 
 # Get the Elasticsearch username and password from environment variables
-elasticsearch_username = os.environ.get("ELASTICSEARCH_USERNAME")
 
-elasticsearch_password = os.environ.get("ELASTICSEARCH_PASSWORD")
 with open('./style.css','r') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-client = Elasticsearch("https://6bfb-197-26-235-192.ngrok-free.app:443" ,basic_auth=(elasticsearch_username,elasticsearch_password))
+client = Elasticsearch("https://6bfb-197-26-235-192.ngrok-free.app:443" )
 
 
 def check_server(client):
