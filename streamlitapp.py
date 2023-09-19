@@ -9,7 +9,7 @@ import os
 with open('./style.css','r') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-client = Elasticsearch("https://6bfb-197-26-235-192.ngrok-free.app:443" )
+client = Elasticsearch("https://3704-197-26-235-192.ngrok-free.app:443" )
 
 
 def check_server(client):
