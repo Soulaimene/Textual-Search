@@ -9,14 +9,13 @@ import os
 with open('./style.css','r') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-client = Elasticsearch("https://3704-197-26-235-192.ngrok-free.app:443" )
 
 
 def check_server(client):
     if client.ping() == False:
         st.toast("Elastic Search Server Is Not Running!")
 
-def display_results(query,searchtype):
+def display_results(client,query,searchtype):
     check_server(client)
     getreq = {
             searchtype: {"tags":query}
@@ -38,10 +37,10 @@ def display_results(query,searchtype):
                 col_heights[col_id] += 1
                 displayed_images += 1
  
-#__main__
+
 
 if __name__ == "__main__" : 
- 
+    client = Elasticsearch("https://2f3a-196-203-181-122.ngrok-free.app:443" )
     st.write('## Textual Search Bar')
     st.sidebar.write('# Search Features ')
     searchType = st.sidebar.selectbox('Select Search Type:', ['match','fuzzy'])
@@ -50,6 +49,6 @@ if __name__ == "__main__" :
         query = st.text_input('Enter some text')
         submit = st.form_submit_button("Search")
         if submit :
-            display_results(query,searchType)
+            display_results(client,query,searchType)
 
 
