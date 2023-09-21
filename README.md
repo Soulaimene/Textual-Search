@@ -4,7 +4,9 @@
 
 ## Overview
 
-Welcome to the Textual Search Engine project! This application is designed to provide users with a powerful and user-friendly way to search through large volumes of text data using Elasticsearch, present the results through a Streamlit web interface, and make it accessible to anyone with the help of ngrok for easy sharing.
+Welcome to the Textual Search Engine project! [This application](https://soulaimene-textual-search-streamlitapp-aetig0.streamlit.app) is designed to provide users with a powerful and user-friendly way to search through large volumes of text data using Elasticsearch, present the results through a Streamlit web interface, and make it accessible to anyone with the help of ngrok for easy sharing.
+### Demo : 
+![ngrok Illustration](images/demo.gif)
 
 ### Key Features
 
