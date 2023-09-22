@@ -40,7 +40,7 @@ def display_results(client,query,searchtype):
 
 
 if __name__ == "__main__" : 
-    client = Elasticsearch("https://f9d0-197-26-198-242.ngrok-free.app:443" )
+    client = Elasticsearch("https://186e-196-203-181-122.ngrok-free.app:443" )
     st.write('## Textual Search Bar')
     st.sidebar.write('# Search Features ')
     searchType = st.sidebar.selectbox('Select Search Type:', ['match','fuzzy'])
