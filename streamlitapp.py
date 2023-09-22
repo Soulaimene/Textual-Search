@@ -25,7 +25,7 @@ def display_results(client,query,searchtype):
     col_heights = [0, 0]
     displayed_images = 0
     for hit in results["hits"]['hits']:
-        if displayed_images >= 4:
+        if displayed_images >= 10:
             break
         image_data = hit["_source"]
         image= "http://farm"+image_data['flickr_farm']+".staticflickr.com/"+image_data['flickr_server']+"/"+image_data["id"]+"_"+image_data['flickr_secret']+".jpg"
